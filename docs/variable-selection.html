@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>References | Spatial Machine Learning Compendium</title>
+  <title>Chapter 2 Variable Selection | Spatial Machine Learning Compendium</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="References | Spatial Machine Learning Compendium" />
+  <meta property="og:title" content="Chapter 2 Variable Selection | Spatial Machine Learning Compendium" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="References | Spatial Machine Learning Compendium" />
+  <meta name="twitter:title" content="Chapter 2 Variable Selection | Spatial Machine Learning Compendium" />
   
   <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="variable-selection.html"/>
-
+<link rel="prev" href="intro.html"/>
+<link rel="next" href="references.html"/>
 <script src="libs/header-attrs-2.9.3/header-attrs.js"></script>
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -191,15 +191,36 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="references" class="section level1 unnumbered">
-<h1>References</h1>
-
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div class="csl-entry">
-Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd ed. Boca Raton, Florida: Chapman; Hall/CRC. <a href="http://yihui.org/knitr/">http://yihui.org/knitr/</a>.
+<div id="variable-selection" class="section level1" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Variable Selection</h1>
+<div id="effect-of-additional-variables-on-machine-learning-model-extrapolation" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Effect of Additional Variables on Machine Learning Model Extrapolation</h2>
+<div id="the-basic-assumption" class="section level3" number="2.1.1">
+<h3><span class="header-section-number">2.1.1</span> The basic assumption</h3>
+<p>Imagine we only have predictors with their values ranging from 1 to 10. Using one predictor to model some response, lets assume we have a sample of 10 points each with a different predictor values. We can assume, that this one predictor gives us a 100 % Area of Applicability, since we have covered the whole range of predictor space.</p>
+<p><img src="spatialml_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
 </div>
-<div class="csl-entry">
-———. 2021. <em>Bookdown: Authoring Books and Technical Documents with r Markdown</em>. <a href="https://CRAN.R-project.org/package=bookdown">https://CRAN.R-project.org/package=bookdown</a>.
+<div id="extrapolation" class="section level3" number="2.1.2">
+<h3><span class="header-section-number">2.1.2</span> Extrapolation</h3>
+<p>If we use a second predictor, also covering its full range from 1 to 10, it is not guaranteed that we cover the whole combined predictor space. The worst case scenario is, that predictor B2 covers is only sampled at a single value of predictor B1.<br />
+This leaves 90% of the combined predictor space uncovered leading to extrapolations of the machine learning models. We need much more observations (10 values of B2 for each of the 10 values of B1, 100 in total) in order to cover the full predictor space.</p>
+<table>
+<tr>
+<td>
+<img src="spatialml_files/figure-html/unnamed-chunk-2-1.png" width="672" />
+</td>
+<td>
+<img src="spatialml_files/figure-html/unnamed-chunk-3-1.png" width="672" />
+</td>
+</tr>
+</table>
+</div>
+<div id="one-more-variable" class="section level3" number="2.1.3">
+<h3><span class="header-section-number">2.1.3</span> One more variable</h3>
+<p>This effect is magnified in higher dimensions. With just 3 of our fictional variables, we would need 10x10x10 = 1000 sampling points to cover the whole predictor space.
+Preventing extrapolation is therefore much more likely with fewer variables, since we have a much higher chance to cover the full combined predictor space.</p>
+<p><img src="spatialml_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+
 </div>
 </div>
 </div>
@@ -208,8 +229,8 @@ Xie, Yihui. 2015. <em>Dynamic Documents with <span>R</span> and Knitr</em>. 2nd 
           </div>
         </div>
       </div>
-<a href="variable-selection.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

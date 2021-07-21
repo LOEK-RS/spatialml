@@ -1,8 +1,8 @@
-prerequisites
+fig:nice-fig
+tab:nice-tab
 intro
-literature
-methods
-applications
-example-one
-example-two
-final-words
+variable-selection
+effect-of-additional-variables-on-machine-learning-model-extrapolation
+the-basic-assumption
+extrapolation
+one-more-variable
