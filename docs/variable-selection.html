@@ -4,37 +4,38 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 Variable Selection | Spatial Machine Learning Compendium</title>
-  <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
-  <meta name="generator" content="bookdown 0.22 and GitBook 2.6.7" />
+  <title>Chapter 3 Variable Selection | Spatial Machine Learning Compendium</title>
+  <meta name="description" content="Machine Learning Methods in the geo-spatial context." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 Variable Selection | Spatial Machine Learning Compendium" />
+  <meta property="og:title" content="Chapter 3 Variable Selection | Spatial Machine Learning Compendium" />
   <meta property="og:type" content="book" />
   
   
-  <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta property="og:description" content="Machine Learning Methods in the geo-spatial context." />
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 Variable Selection | Spatial Machine Learning Compendium" />
+  <meta name="twitter:title" content="Chapter 3 Variable Selection | Spatial Machine Learning Compendium" />
   
-  <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
+  <meta name="twitter:description" content="Machine Learning Methods in the geo-spatial context." />
   
 
 <meta name="author" content="AG Remote Sensing and Spatial Modelling" />
 
 
-<meta name="date" content="2021-07-21" />
+<meta name="date" content="2021-11-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="intro.html"/>
+<link rel="prev" href="TG.html"/>
 <link rel="next" href="references.html"/>
-<script src="libs/header-attrs-2.9.3/header-attrs.js"></script>
-<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -50,98 +51,11 @@
 
 
 
-
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
 
 
-<style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
 
-<style type="text/css">
-/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -159,15 +73,15 @@ div.csl-indent {
 <li><a href="./">Spatial Machine Learning Compendium</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Hello World</a></li>
-<li class="chapter" data-level="1" data-path="intro.html"><a href="intro.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
-<li class="chapter" data-level="2" data-path="variable-selection.html"><a href="variable-selection.html"><i class="fa fa-check"></i><b>2</b> Variable Selection</a>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Hello World</a></li>
+<li class="chapter" data-level="2" data-path="TG.html"><a href="TG.html"><i class="fa fa-check"></i><b>2</b> Technical guidelines</a></li>
+<li class="chapter" data-level="3" data-path="variable-selection.html"><a href="variable-selection.html"><i class="fa fa-check"></i><b>3</b> Variable Selection</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="variable-selection.html"><a href="variable-selection.html#effect-of-additional-variables-on-machine-learning-model-extrapolation"><i class="fa fa-check"></i><b>2.1</b> Effect of Additional Variables on Machine Learning Model Extrapolation</a>
+<li class="chapter" data-level="3.1" data-path="variable-selection.html"><a href="variable-selection.html#effect-of-additional-variables-on-machine-learning-model-extrapolation"><i class="fa fa-check"></i><b>3.1</b> Effect of Additional Variables on Machine Learning Model Extrapolation</a>
 <ul>
-<li class="chapter" data-level="2.1.1" data-path="variable-selection.html"><a href="variable-selection.html#the-basic-assumption"><i class="fa fa-check"></i><b>2.1.1</b> The basic assumption</a></li>
-<li class="chapter" data-level="2.1.2" data-path="variable-selection.html"><a href="variable-selection.html#extrapolation"><i class="fa fa-check"></i><b>2.1.2</b> Extrapolation</a></li>
-<li class="chapter" data-level="2.1.3" data-path="variable-selection.html"><a href="variable-selection.html#one-more-variable"><i class="fa fa-check"></i><b>2.1.3</b> One more variable</a></li>
+<li class="chapter" data-level="3.1.1" data-path="variable-selection.html"><a href="variable-selection.html#the-basic-assumption"><i class="fa fa-check"></i><b>3.1.1</b> The basic assumption</a></li>
+<li class="chapter" data-level="3.1.2" data-path="variable-selection.html"><a href="variable-selection.html#extrapolation"><i class="fa fa-check"></i><b>3.1.2</b> Extrapolation</a></li>
+<li class="chapter" data-level="3.1.3" data-path="variable-selection.html"><a href="variable-selection.html#one-more-variable"><i class="fa fa-check"></i><b>3.1.3</b> One more variable</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
@@ -191,17 +105,17 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="variable-selection" class="section level1" number="2">
-<h1><span class="header-section-number">Chapter 2</span> Variable Selection</h1>
-<div id="effect-of-additional-variables-on-machine-learning-model-extrapolation" class="section level2" number="2.1">
-<h2><span class="header-section-number">2.1</span> Effect of Additional Variables on Machine Learning Model Extrapolation</h2>
-<div id="the-basic-assumption" class="section level3" number="2.1.1">
-<h3><span class="header-section-number">2.1.1</span> The basic assumption</h3>
+<div id="variable-selection" class="section level1" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Variable Selection</h1>
+<div id="effect-of-additional-variables-on-machine-learning-model-extrapolation" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Effect of Additional Variables on Machine Learning Model Extrapolation</h2>
+<div id="the-basic-assumption" class="section level3" number="3.1.1">
+<h3><span class="header-section-number">3.1.1</span> The basic assumption</h3>
 <p>Imagine we only have predictors with their values ranging from 1 to 10. Using one predictor to model some response, lets assume we have a sample of 10 points each with a different predictor values. We can assume, that this one predictor gives us a 100 % Area of Applicability, since we have covered the whole range of predictor space.</p>
 <p><img src="spatialml_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
 </div>
-<div id="extrapolation" class="section level3" number="2.1.2">
-<h3><span class="header-section-number">2.1.2</span> Extrapolation</h3>
+<div id="extrapolation" class="section level3" number="3.1.2">
+<h3><span class="header-section-number">3.1.2</span> Extrapolation</h3>
 <p>If we use a second predictor, also covering its full range from 1 to 10, it is not guaranteed that we cover the whole combined predictor space. The worst case scenario is, that predictor B2 covers is only sampled at a single value of predictor B1.<br />
 This leaves 90% of the combined predictor space uncovered leading to extrapolations of the machine learning models. We need much more observations (10 values of B2 for each of the 10 values of B1, 100 in total) in order to cover the full predictor space.</p>
 <table>
@@ -215,8 +129,8 @@ This leaves 90% of the combined predictor space uncovered leading to extrapolati
 </tr>
 </table>
 </div>
-<div id="one-more-variable" class="section level3" number="2.1.3">
-<h3><span class="header-section-number">2.1.3</span> One more variable</h3>
+<div id="one-more-variable" class="section level3" number="3.1.3">
+<h3><span class="header-section-number">3.1.3</span> One more variable</h3>
 <p>This effect is magnified in higher dimensions. With just 3 of our fictional variables, we would need 10x10x10 = 1000 sampling points to cover the whole predictor space.
 Preventing extrapolation is therefore much more likely with fewer variables, since we have a much higher chance to cover the full combined predictor space.</p>
 <p><img src="spatialml_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
@@ -229,12 +143,11 @@ Preventing extrapolation is therefore much more likely with fewer variables, sin
           </div>
         </div>
       </div>
-<a href="intro.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="TG.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -246,9 +159,9 @@ Preventing extrapolation is therefore much more likely with fewer variables, sin
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
 "sharing": {
-"github": false,
-"facebook": true,
-"twitter": true,
+"github": true,
+"facebook": false,
+"twitter": false,
 "linkedin": false,
 "weibo": false,
 "instapaper": false,
@@ -274,6 +187,10 @@ gitbook.start({
 "text": null
 },
 "download": ["spatialml.pdf", "spatialml.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
 "toc": {
 "collapse": "subsection"
 }

@@ -9,13 +9,10 @@ bibliography:
   - packages.bib
 biblio-style: apalike
 link-citations: yes
-description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
+description: "Machine Learning Methods in the geo-spatial context."
 ---
 
 
-# Hello World {-}
-
-Welcome to the compendium!
-
+# Hello World
 
 

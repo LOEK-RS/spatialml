@@ -1,6 +1,6 @@
 book_filename: "spatialml"
 rmd_files: ["index.Rmd",
-            "01-intro.Rmd",
+            "technical_guidelines.Rmd",
             "02-variable_selection.Rmd",
             "06-references.Rmd"]
 delete_merged_file: true

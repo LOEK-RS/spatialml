@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>References | Spatial Machine Learning Compendium</title>
+  <title>Chapter 2 Technical guidelines | Spatial Machine Learning Compendium</title>
   <meta name="description" content="Machine Learning Methods in the geo-spatial context." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="References | Spatial Machine Learning Compendium" />
+  <meta property="og:title" content="Chapter 2 Technical guidelines | Spatial Machine Learning Compendium" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="References | Spatial Machine Learning Compendium" />
+  <meta name="twitter:title" content="Chapter 2 Technical guidelines | Spatial Machine Learning Compendium" />
   
   <meta name="twitter:description" content="Machine Learning Methods in the geo-spatial context." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="variable-selection.html"/>
-
+<link rel="prev" href="index.html"/>
+<link rel="next" href="variable-selection.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -105,8 +105,30 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="references" class="section level1 unnumbered">
-<h1>References</h1>
+<div id="TG" class="section level1" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Technical guidelines</h1>
+<p>The file <code>_bookdown.yaml</code> defines the structure of the chapters.
+The command <code>bookdown::render_book()</code> renders all <code>.Rmd files</code> defined in <code>_bookdown.yaml</code> and puts the end result into the <code>/docs</code> directory. This is the directory where Github creates the <a href="https://loek-rs.github.io/spatialml/">Homepage</a> from.</p>
+<p>Here are some suggestions on technical stuff during writing:</p>
+<p><strong>0. Do not modify the files in the <code>/docs</code> directory.</strong></p>
+<p><strong>1. NEVER push directly to the group repository</strong></p>
+<ul>
+<li>Make a fork to your personal GitHub Account</li>
+<li>Make changes in this fork</li>
+<li>Use a pull request once you are satisfied with you changes</li>
+</ul>
+<p><strong>2. Main branch = Clean version</strong></p>
+<ul>
+<li>The main branch is used to render the <a href="https://loek-rs.github.io/spatialml/">Homepage</a></li>
+<li>I suggest using branches sparsely but i fell like we need at least a “dev” branch.</li>
+</ul>
+<p><strong>3. Figures (Suggestion)</strong></p>
+<ul>
+<li>R code that produces figures for the book should not be directly executed in the <code>.Rmd</code> files for the chapters.</li>
+<li>Instead use an external script that saves a <code>.svg</code> file.</li>
+<li>This way we also have a clean version of the figure itself (e.g. for sharing or presentations)</li>
+<li>In the chapters then use a code chunk that just contains <code>knitr::include_graphics()</code>.</li>
+</ul>
 
 </div>
             </section>
@@ -114,8 +136,8 @@
           </div>
         </div>
       </div>
-<a href="variable-selection.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="variable-selection.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -1,0 +1,30 @@
+# Technical guidelines {#TG}
+
+The file `_bookdown.yaml` defines the structure of the chapters.
+The command `bookdown::render_book()` renders all `.Rmd files` defined in `_bookdown.yaml` and puts the end result into the `/docs` directory. This is the directory where Github creates the [Homepage](https://loek-rs.github.io/spatialml/) from.
+
+
+Here are some suggestions on technical stuff during writing:
+
+**0. Do not modify the files in the `/docs` directory.**
+
+
+**1. NEVER push directly to the group repository**
+
+* Make a fork to your personal GitHub Account
+* Make changes in this fork
+* Use a pull request once you are satisfied with you changes
+
+
+**2. Main branch = Clean version**
+
+* The main branch is used to render the [Homepage](https://loek-rs.github.io/spatialml/)
+* I suggest using branches sparsely but i fell like we need at least a "dev" branch.
+
+**3. Figures (Suggestion)**
+
+* R code that produces figures for the book should not be directly executed in the `.Rmd` files for the chapters.
+* Instead use an external script that saves a `.svg` file.
+* This way we also have a clean version of the figure itself (e.g. for sharing or presentations)
+* In the chapters then use a code chunk that just contains `knitr::include_graphics()`.
+
