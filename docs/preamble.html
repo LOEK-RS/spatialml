@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4 Technical guidelines | Spatial Predictive Modelling with Applications in R</title>
+  <title>2 Preamble | Spatial Predictive Modelling with Applications in R</title>
   <meta name="description" content="Spatial predictive modelling with applications in R" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4 Technical guidelines | Spatial Predictive Modelling with Applications in R" />
+  <meta property="og:title" content="2 Preamble | Spatial Predictive Modelling with Applications in R" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4 Technical guidelines | Spatial Predictive Modelling with Applications in R" />
+  <meta name="twitter:title" content="2 Preamble | Spatial Predictive Modelling with Applications in R" />
   
   <meta name="twitter:description" content="Spatial predictive modelling with applications in R" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="planned-content.html"/>
-<link rel="next" href="references.html"/>
+<link rel="prev" href="index.html"/>
+<link rel="next" href="planned-content.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -137,39 +137,33 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="TG" class="section level1" number="4">
-<h1><span class="header-section-number">4</span> Technical guidelines</h1>
-<p>The file <code>_bookdown.yaml</code> defines the structure of the chapters.
-The command <code>bookdown::render_book()</code> renders all <code>.Rmd files</code> defined in <code>_bookdown.yaml</code> and puts the end result into the <code>/docs</code> directory. This is the directory where Github creates the <a href="https://loek-rs.github.io/spatialml/">Homepage</a> from.</p>
-<p>Here are some suggestions on technical stuff during writing:</p>
-<p><strong>0. Do not modify the files in the <code>/docs</code> directory.</strong></p>
-<p><strong>1. NEVER push directly to the group repository</strong></p>
+<div id="preamble" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Preamble</h1>
+<div id="what-you-need-to-know-before-you-read-this-book" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> What you need to know before you read this book</h2>
 <ul>
-<li>Make a fork to your personal GitHub Account</li>
-<li>Make changes in this fork</li>
-<li>Use a pull request once you are satisfied with you changes</li>
+<li>basics of remote sensing</li>
+<li>minimum amount of statistics</li>
+<li>new to machine learning</li>
+<li>(familiarity with R)</li>
 </ul>
-<p><strong>2. Main branch = Clean version</strong></p>
+</div>
+<div id="our-writing-guidelines" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Our writing guidelines</h2>
 <ul>
-<li>The main branch is used to render the <a href="https://loek-rs.github.io/spatialml/">Homepage</a></li>
-<li>I suggest using branches sparsely but i fell like we need at least a “dev” branch.</li>
+<li>Understanding the concepts are the main focus</li>
+<li>Explanations are independent of programming language</li>
+<li>R for the examples. Why R?</li>
 </ul>
-<p><strong>3. Figures (Suggestion)</strong></p>
-<ul>
-<li>R code that produces figures for the book should not be directly executed in the <code>.Rmd</code> files for the chapters.</li>
-<li>Instead use an external script that saves a <code>.svg</code> file.</li>
-<li>This way we also have a clean version of the figure itself (e.g. for sharing or presentations)</li>
-<li>In the chapters then use a code chunk that just contains <code>knitr::include_graphics()</code>.</li>
-</ul>
-
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="planned-content.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="planned-content.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

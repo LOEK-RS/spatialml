@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4 Technical guidelines | Spatial Predictive Modelling with Applications in R</title>
+  <title>3 Planned Content | Spatial Predictive Modelling with Applications in R</title>
   <meta name="description" content="Spatial predictive modelling with applications in R" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4 Technical guidelines | Spatial Predictive Modelling with Applications in R" />
+  <meta property="og:title" content="3 Planned Content | Spatial Predictive Modelling with Applications in R" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4 Technical guidelines | Spatial Predictive Modelling with Applications in R" />
+  <meta name="twitter:title" content="3 Planned Content | Spatial Predictive Modelling with Applications in R" />
   
   <meta name="twitter:description" content="Spatial predictive modelling with applications in R" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="planned-content.html"/>
-<link rel="next" href="references.html"/>
+<link rel="prev" href="preamble.html"/>
+<link rel="next" href="TG.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -137,39 +137,145 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="TG" class="section level1" number="4">
-<h1><span class="header-section-number">4</span> Technical guidelines</h1>
-<p>The file <code>_bookdown.yaml</code> defines the structure of the chapters.
-The command <code>bookdown::render_book()</code> renders all <code>.Rmd files</code> defined in <code>_bookdown.yaml</code> and puts the end result into the <code>/docs</code> directory. This is the directory where Github creates the <a href="https://loek-rs.github.io/spatialml/">Homepage</a> from.</p>
-<p>Here are some suggestions on technical stuff during writing:</p>
-<p><strong>0. Do not modify the files in the <code>/docs</code> directory.</strong></p>
-<p><strong>1. NEVER push directly to the group repository</strong></p>
+<div id="planned-content" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Planned Content</h1>
+<div id="introduction" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> Introduction</h2>
 <ul>
-<li>Make a fork to your personal GitHub Account</li>
-<li>Make changes in this fork</li>
-<li>Use a pull request once you are satisfied with you changes</li>
+<li><p>Motivation</p></li>
+<li><p>Fields of application</p></li>
+<li><p>Spatial Predictive Mapping</p></li>
+<li><p>Why is spatial special?</p></li>
+<li><p>Scope and Target Group</p></li>
+<li><p>How this book is structured</p>
+<ul>
+<li>Explanations and content</li>
+<li>Example in R</li>
+<li>Questions and food for thought</li>
+<li>Further reading</li>
+</ul></li>
 </ul>
-<p><strong>2. Main branch = Clean version</strong></p>
+</div>
+<div id="what-we-mean-by-spatial" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> What we mean by spatial</h2>
 <ul>
-<li>The main branch is used to render the <a href="https://loek-rs.github.io/spatialml/">Homepage</a></li>
-<li>I suggest using branches sparsely but i fell like we need at least a “dev” branch.</li>
+<li>Introduction to Spatial Data</li>
 </ul>
-<p><strong>3. Figures (Suggestion)</strong></p>
+</div>
+<div id="datasets" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> Datasets</h2>
 <ul>
-<li>R code that produces figures for the book should not be directly executed in the <code>.Rmd</code> files for the chapters.</li>
-<li>Instead use an external script that saves a <code>.svg</code> file.</li>
-<li>This way we also have a clean version of the figure itself (e.g. for sharing or presentations)</li>
-<li>In the chapters then use a code chunk that just contains <code>knitr::include_graphics()</code>.</li>
+<li>Classification
+<ul>
+<li>Predictors: Sentinel-2</li>
+<li>Response: Landcover Class</li>
+</ul></li>
+<li>Regression
+<ul>
+<li>???</li>
+</ul></li>
+</ul>
+</div>
+<div id="my-first-prediction-model" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> My first prediction model</h2>
+<ul>
+<li>Short minimum example</li>
+<li>Explain what else needs to be considered</li>
+<li>Short summary of the rest of the chapters</li>
+</ul>
+</div>
+<div id="predictive-modelling" class="section level2" number="3.5">
+<h2><span class="header-section-number">3.5</span> Predictive Modelling</h2>
+<div id="what-is-a-model" class="section level3" number="3.5.1">
+<h3><span class="header-section-number">3.5.1</span> What is a model?</h3>
+</div>
+<div id="usual-workflow" class="section level3" number="3.5.2">
+<h3><span class="header-section-number">3.5.2</span> Usual Workflow</h3>
+<ul>
+<li>sampling locations</li>
+<li>predictors</li>
+<li>model training</li>
+<li>model validation</li>
+<li>prediction</li>
+</ul>
+</div>
+<div id="predictive-modelling-in-r" class="section level3" number="3.5.3">
+<h3><span class="header-section-number">3.5.3</span> Predictive modelling in R</h3>
+</div>
+</div>
+<div id="machine-learning" class="section level2" number="3.6">
+<h2><span class="header-section-number">3.6</span> Machine Learning</h2>
+<div id="why-machine-learning" class="section level3" number="3.6.1">
+<h3><span class="header-section-number">3.6.1</span> Why machine learning?</h3>
+</div>
+<div id="common-algorithms" class="section level3" number="3.6.2">
+<h3><span class="header-section-number">3.6.2</span> Common algorithms</h3>
+</div>
+</div>
+<div id="predictive-modelling-with-machine-learning" class="section level2" number="3.7">
+<h2><span class="header-section-number">3.7</span> Predictive Modelling with Machine Learning</h2>
+<div id="modelling-goals" class="section level3" number="3.7.1">
+<h3><span class="header-section-number">3.7.1</span> Modelling goals</h3>
+<ul>
+<li>What is the model telling us now?</li>
+<li>What is the model lacking?</li>
+<li>How can we improve the model</li>
+</ul>
+</div>
+<div id="estimating-model-performances" class="section level3" number="3.7.2">
+<h3><span class="header-section-number">3.7.2</span> Estimating Model performances</h3>
+</div>
+<div id="spatial-cross-validation" class="section level3" number="3.7.3">
+<h3><span class="header-section-number">3.7.3</span> (Spatial) Cross Validation</h3>
+</div>
+<div id="model-selection" class="section level3" number="3.7.4">
+<h3><span class="header-section-number">3.7.4</span> Model Selection</h3>
+</div>
+<div id="hyperparameter-tuning" class="section level3" number="3.7.5">
+<h3><span class="header-section-number">3.7.5</span> Hyperparameter Tuning</h3>
+</div>
+<div id="variable-selection" class="section level3" number="3.7.6">
+<h3><span class="header-section-number">3.7.6</span> Variable Selection</h3>
+</div>
+</div>
+<div id="mapping" class="section level2" number="3.8">
+<h2><span class="header-section-number">3.8</span> Mapping</h2>
+<div id="estimating-the-map-accuracy" class="section level3" number="3.8.1">
+<h3><span class="header-section-number">3.8.1</span> Estimating the map accuracy</h3>
+</div>
+<div id="explaining-what-the-model-has-learned" class="section level3" number="3.8.2">
+<h3><span class="header-section-number">3.8.2</span> Explaining what the model has learned</h3>
+</div>
+<div id="uncertainty-estimations" class="section level3" number="3.8.3">
+<h3><span class="header-section-number">3.8.3</span> Uncertainty Estimations</h3>
+<ul>
+<li>AOA</li>
+<li>SD</li>
+</ul>
+</div>
+</div>
+<div id="summary" class="section level2" number="3.9">
+<h2><span class="header-section-number">3.9</span> Summary</h2>
+</div>
+<div id="glossary-terminology" class="section level2" number="3.10">
+<h2><span class="header-section-number">3.10</span> Glossary / Terminology</h2>
+</div>
+<div id="usecases" class="section level2" number="3.11">
+<h2><span class="header-section-number">3.11</span> Usecases</h2>
+<p>Space for deviations of the main concepts e.g.</p>
+<ul>
+<li>UAS Data, Segmentation, Object Based</li>
 </ul>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="planned-content.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="preamble.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="TG.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

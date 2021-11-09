@@ -1,0 +1,125 @@
+# Preamble
+
+
+## What you need to know before you read this book
+
+* basics of remote sensing
+* minimum amount of statistics
+* new to machine learning
+* (familiarity with R)
+
+
+## Our writing guidelines 
+
+
+* Understanding the concepts are the main focus
+* Explanations are independent of programming language
+* R for the examples. Why R?
+
+
+# Planned Content
+
+## Introduction
+
+* Motivation
+* Fields of application
+* Spatial Predictive Mapping
+* Why is spatial special?
+* Scope and Target Group
+
+* How this book is structured
+    * Explanations and content
+    * Example in R
+    * Questions and food for thought
+    * Further reading
+
+## What we mean by spatial
+
+* Introduction to Spatial Data
+
+
+## Datasets
+
+* Classification
+    * Predictors: Sentinel-2
+    * Response: Landcover Class
+* Regression
+    * ???
+
+## My first prediction model
+
+* Short minimum example
+* Explain what else needs to be considered
+* Short summary of the rest of the chapters
+
+
+## Predictive Modelling
+
+### What is a model?
+
+### Usual Workflow
+
+* sampling locations
+* predictors
+* model training
+* model validation
+* prediction
+
+### Predictive modelling in R
+
+
+## Machine Learning
+
+### Why machine learning?
+
+### Common algorithms
+
+## Predictive Modelling with Machine Learning
+
+### Modelling goals
+
+* What is the model telling us now?
+* What is the model lacking?
+* How can we improve the model
+
+### Estimating Model performances
+
+### (Spatial) Cross Validation
+
+### Model Selection
+
+### Hyperparameter Tuning
+
+### Variable Selection
+
+
+## Mapping
+
+### Estimating the map accuracy
+
+### Explaining what the model has learned
+
+### Uncertainty Estimations
+
+* AOA
+* SD
+
+## Summary
+
+
+
+
+## Glossary / Terminology
+
+
+
+## Usecases
+
+Space for deviations of the main concepts e.g.
+
+* UAS Data, Segmentation, Object Based 
+
+
+
+
+

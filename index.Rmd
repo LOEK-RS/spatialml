@@ -1,5 +1,5 @@
 --- 
-title: "Spatial Machine Learning Compendium"
+title: "Spatial Predictive Modelling with Applications in R"
 author: "AG Remote Sensing and Spatial Modelling"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -9,10 +9,10 @@ bibliography:
   - packages.bib
 biblio-style: apalike
 link-citations: yes
-description: "Machine Learning Methods in the geo-spatial context."
+description: "Spatial predictive modelling with applications in R"
 ---
 
 
-# Hello World
+# Landing Page
 
 
